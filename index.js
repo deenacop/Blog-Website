@@ -33,8 +33,6 @@ Feel free to explore and enjoy your time here!`;
 
 const contactContent = "";
 
-
-
 app.get("/", (req, res) => {
     res.render("home.ejs",{
       homeStartingContent: homeStartingContent,
@@ -88,57 +86,6 @@ app.post("/post", (req, res) => {
 });
 
 
-
-
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);
   });
-
-
-
-
-
-
-
-/*const Schema = mongoose.Schema;
-
-const blog = new Schema({
-    title: String,
-    slug: String,
-    published: Boolean,
-    content: String,
- });
-
- const Blog = mongoose.model('Blog', blog);
-
- 
-
-
-app.get("/", (req,res)=>{
-    const article = new Blog({
-        title: 'Awesome Post!',
-        slug: 'awesome-post',
-        published: true,
-        content: 'This is the best post ever',
-    });
-
-    article.save();
-
-    res.render("index.ejs", {article: article});
-})
-
-app.get("/post", (req, res) => {
-    res.render("post.ejs");
-  });
-
-
-app.post("/",(req,res)=>{
-    const newArticle = new Blog({
-        title: req.body["title"],
-        slug: req.body["slug"],
-        published: true,
-        content: req.body["content"],
-    });
-    newArticle.save();
-    res.render("index.ejs",{article: newArticle});
-})*/
