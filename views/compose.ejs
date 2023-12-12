@@ -1,0 +1,17 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Post</h1>
+
+<form  action="/post" method="POST">
+    <div class="mb-3 form-group">
+      <label class="form-label">Title</label>
+      <input name="title" type="text" class="form-control feedback-input" placeholder="Title" />
+    </div>
+    <div class="mb-3 form-group">
+      <label for="exampleInputPassword1" class="form-label">Content</label>
+      <textarea name="content" class="form-control feedback-input" rows="5" cols="30" placeholder="Content"></textarea>
+    </div>
+    <button type="submit" class="button-42">POST</button>
+  </form>
+
+<%- include('partials/footer.ejs') %>

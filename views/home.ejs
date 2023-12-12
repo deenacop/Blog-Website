@@ -1,0 +1,31 @@
+<%- include("partials/header.ejs") %>
+
+<h1>Home</h1>
+<p><%= homeStartingContent %></p>
+
+<% if(locals.posts){ %>
+  <% for(let i=0; i< posts.length; i++){ %>
+    <h3><%= posts[i]["title"] %></h3>
+
+    <p>
+      <% if(posts[i]["content"].length <= 150) { %>
+        <%= posts[i]["content"] + "  " %>
+      <% } else { %>
+        <%= posts[i]["content"].substring(0, 150) + " ..." %>
+        <a href="/<%= posts[i]["title"] %>">Read More</a>
+      <% } %>
+      
+    </p>
+  
+  <% } %>
+<% } %>
+    
+  
+  <form action="/compose" method="POST">
+    <button type="submit" class="button-42 ">Compose</button>
+    
+  </form>
+
+<%- include('partials/footer.ejs') %>
+
+
