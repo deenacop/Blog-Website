@@ -10,7 +10,7 @@ Technologies Used:
 Getting Started:
 1. Clone the repository to your local machine.
 2. Install the required dependencies using npm install.
-3. Launch the application with npm start.
+3. Launch the application with node index.js.
 4. Access the website through your browser at http://localhost:3000.
 
 
